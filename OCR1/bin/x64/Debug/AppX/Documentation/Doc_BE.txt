@@ -1,0 +1,60 @@
+﻿BACKEND DOCUMENTATION
+V. 0.1
+
+Project goals include:
+	- Optical Character Recognition implementation
+	- Research in field of OCR
+	- Project managment 
+
+Tasks:
+
+There are 2 main tasks for the Backend:
+	1. Preparing the Image
+	2. Recognizing the Image
+
+Each Task Should:
+	1. Have an organized structure for both, the Files, and the
+	   Coding itself. This Includes:
+			- Naming Variables, Functions, Files and Folders Appropriately.
+
+			- Naming Variables, Functions, Files and Folders in a way, 
+			  that the other Backend Devs can also understand what 
+			  purpose they have.
+
+			- Having Comments with a brief explanation of the Function or
+			  an important Variable.
+
+			- Coding in a way, that the other Backend Devs can understand
+			  what is going on in the individual part of the Program.
+
+	2. Have Code only within the File for the specific Part of the Program.
+
+Preparing the Image:
+	This Task is intended for 2+ People, and Includes:
+		1. Transforming the Image into (ideally) an Array.
+			(Please Note that the Array should not have Colors)
+			(\Backend\ImagePrep\Digitalize.cs)
+
+		2. Removing Artifacts from the Image.
+			(\Backend\ImagePrep\Cleanup.cs)
+
+		3. Transforming the Image, so that the Letter(s) are in the Middle
+		   of a Rectangle / Square.
+			(\Backend\ImagePrep\Transform.cs)
+
+	Devs Allocated to this Task should work in the \Backend\ImagePrep\
+	Directory.
+
+
+Recognizing the Image:
+	This Task is a 1 Person only Job, and Includes:
+		1. Programming the Structure for the ANN.
+
+		2. Optimizing the Structure for the ANN.
+
+		3. Training the ANN.
+
+		4. Improving the Training for the ANN.
+
+		5. Repeating Steps 2-5 until an Efficient ANN with fast Training
+		   is achieved.

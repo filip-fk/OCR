@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="OCR1.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OCR1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--<x:String x:Key="greeting">Hello world</x:String>-->
+
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid VerticalAlignment="Stretch">
+            <Grid Height="38" VerticalAlignment="Top">
+                <Button HorizontalAlignment="Right" Background="{x:Null}" Click="upload_image">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="upload_btn_icon" FontFamily="segoe mdl2 assets" Text="&#xE74a;" VerticalAlignment="Center"/>
+                        <TextBlock Name="upload_btn_text" Text="Upload" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid Margin="0,38,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Background="#e7e7e7">
+                    <StackPanel Name="image_load" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                        <TextBlock Foreground="Gray" FontSize="50" FontFamily="segoe mdl2 assets" Text="&#xEb9f;" HorizontalAlignment="Center"/>
+                        <TextBlock Name="img_preview_status" Text="Nohing to show here" HorizontalAlignment="Center"/>
+                        <ProgressRing Name="img_preview_progress" IsActive="False" Margin="20" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                    <Image Name="preview_image" HorizontalAlignment="Stretch"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid Margin="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <RichEditBox Name="_output" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" PlaceholderText="Output..." IsEnabled="{Binding ElementName=out_edit_tggl,Path=IsChecked}" Style="{StaticResource Disabled_Blank}"/>
+                        <Grid x:Name="outp_bottom_bar" Grid.Row="1" Padding="10,0">
+                            <StackPanel Orientation="Horizontal">
+                                <ToggleButton x:Name="out_edit_tggl" Content="Can edit" IsChecked="True"/>
+                                <Button Name="out_clear" Content="Clear output" Click="Log_clear_Click"/>
+                                <Button Name="out_copy" Content="Copy" Click="Log_copy_Click"/>
+                            </StackPanel>
+                            <Button Name="out_start" Content="Start" Click="Out_start_Click" HorizontalAlignment="Right"/>
+                        </Grid>
+                        <RichEditBox Name="_console" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" PlaceholderText="Log..." IsEnabled="{Binding ElementName=log_edit_tggl,Path=IsChecked}" Style="{StaticResource Disabled_Blank}" TextChanged="_console_TextChanged"/>
+                        <Grid x:Name="home_bottom_bar" Grid.Row="3" Padding="10,0">
+                            <StackPanel Orientation="Horizontal">
+                                <ToggleButton x:Name="log_edit_tggl" Content="Can edit" IsChecked="True"/>
+                                <Button Name="log_clear" Content="Clear log" Click="Log_clear_Click"/>
+                                <Button Name="log_copy" Content="Copy" Click="Log_copy_Click"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
+    <UseEmulator>true</UseEmulator>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Source>C:\Users\filip\OneDrive - European Schools\OCR\logo1.png</Source>
+    <SmallTileSource>C:\Users\filip\OneDrive - European Schools\OCR\logo1.png</SmallTileSource>
+    <MediumTileSource>C:\Users\filip\OneDrive - European Schools\OCR\logo1.png</MediumTileSource>
+    <WideTileSource>C:\Users\filip\OneDrive - European Schools\OCR\logo1.png</WideTileSource>
+    <LargeTileSource>C:\Users\filip\OneDrive - European Schools\OCR\logo1.png</LargeTileSource>
+    <AppIconSource>C:\Users\filip\OneDrive - European Schools\OCR\logo1.png</AppIconSource>
+    <SplashScreenSource>C:\Users\filip\OneDrive - European Schools\OCR\logo1.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\filip\OneDrive - European Schools\OCR\logo1.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>

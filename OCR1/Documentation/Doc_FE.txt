@@ -1,0 +1,46 @@
+﻿FRONTEND DOCUMENTATION
+V. 0.1
+
+Project goals include:
+	- Optical Character Recognition implementation
+	- Research in field of OCR
+	- Project managment and software creation skills
+
+Timeline:
+	- February (1-15): basic page design + layout structure
+		Home.xaml: UI Elements
+		History.xaml: UI Elements
+		Train.xaml: UI Elements
+		About.xaml: UI Elements
+		Settings.xaml: UI Elements
+	- February (16-30):
+		Home.xaml: Detecting animation
+
+File references:
+	- Default local directory: C:\Users\[username]\Source\Repos\OCR_Project\OCR1
+	- Default online directory: https://KALAPIFI@dev.azure.com/KALAPIFI/OCR_Project/_git/OCR_Project/
+	- New file creation: 
+		- for new main app views: under OCR_Project\OCR1 root folder
+	- Documentation: OCR_Project\OCR1\Documentation
+	- File types:
+		*.xaml (automatic creation of design view + backend *.xaml.cs file)
+		*.cs (class files for helpers)
+		*.txt (text)
+	- File naming: 
+		- CamelCase (first char of each word to Uppercase)
+		- Explicit restrictions: no spaces " "; no underscrore "_"; no hyphen "-";
+		- Implicit restrictions: no illigal chars (Symbols)
+	- File description:
+		- MainPage.xaml (+ Subfolders):
+			The MainPage.xaml file contains an App name header <Grid/> at the top, to replace the default windows TitleBar.
+			The Main container <Grid/> includes a NavView, which take up the full screen
+			Within the <Frame/> Element of the NavView, the user may navigate between the different pages, listed on the right hand-side
+			The MainPage.xaml.cs file contains the functions triggered by UI Elements, user interaction functions: 
+				Please refer to summary
+					
+		- Home.xaml (+ subfolders):
+			Main recognition sandbox
+			top field for status text on left and interactive buttons on righr
+			<Grid/> split the View in half vertically
+			right half is an image preview
+			left half is text output in digital form

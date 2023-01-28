@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="OCR1.Train"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OCR1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <StackPanel Margin="20">
+                <TextBlock Text="How to train the recognition service" FontSize="22"/>
+                <TextBlock Text="Our recognition service is still in Beta. No training feature found. Please come back after future updates!" Margin="5,10,5,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
+
